@@ -1,9 +1,11 @@
 package javashowcase;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.Stack;
@@ -15,6 +17,22 @@ public class JavaCollectionDemo {
 		doStackDemo();
 		doQueueDemo();
 		doSetDemo();
+		doMapDemo();
+	}
+
+	private static void doMapDemo() {
+		System.out.println("\nIn doMapDemo\n");
+
+		Map<Integer, String> map = new HashMap<>();
+		
+		map.put(100, "Amit");
+		map.put(101, "Vijay");
+		map.put(102, "Rahul");
+		
+		for (Map.Entry m : map.entrySet()) {
+			//System.out.println(m.getKey() + "\s" + m.getValue());
+			System.out.println(m);
+		}
 	}
 
 	private static void doSetDemo() {
