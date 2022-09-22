@@ -1,9 +1,11 @@
 package javashowcase;
 
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.Set;
 import java.util.Stack;
 
 public class JavaCollectionDemo {
@@ -12,6 +14,22 @@ public class JavaCollectionDemo {
 		doListDemo();
 		doStackDemo();
 		doQueueDemo();
+		doSetDemo();
+	}
+
+	private static void doSetDemo() {
+		System.out.println("\nIn doSetDemo\n");
+		
+		Set<String> set = new LinkedHashSet<>();
+		
+		set.add("Ravi");
+		set.add("Vijay");
+		set.add("Ravi");
+		set.add("Ajay");
+		
+		for (String str : set) {
+			System.out.println(str);
+		}	
 	}
 
 	private static void doQueueDemo() {
